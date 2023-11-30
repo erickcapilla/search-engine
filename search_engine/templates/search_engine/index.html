@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mi buscador | Erick Capilla && Alexandra Soza</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'search_engine/css/style.css' %}">
+  </head>
+  <body>
+    <header>
+      <div class="header--search-form__container">
+        <form action="" class="search-form" id="search_form">
+          <input type="search" name="" id="input_search" class="search-form--input-search" placeholder="Type a word" />
+          <input type="submit" value="Buscar" id="input_submit" class="search-form--input-submit" />
+        </form>
+      </div>
+    </header>
+    <main>
+      <article class="time--container">
+        <p class="time--text" id="time_text">X cantidad de URL's en x tiempo</p>
+      </article>
+      <article class="urls--container">
+        <section class="url--card__container">
+          <a href="" class="url--card">
+            <picture class="favicon--container">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAM1BMVEUAAAD+/v41NTUBAQEAAABZWVknJycWFhaZmZmIiIjp6ellZWXMzMzX19eurq54eHhHR0dExXFyAAAAAXRSTlMAQObYZgAAAPtJREFUeAG8kAWOBDAMA9d1Sin+/7XXbpZZdBaURlMrhx28ycGCD/n0bvkBwJf8C+AoIvRAWGtMyHGtCWkfxW+DRopuuIjUtTQJDStevNoXWaRjRSllLd1O8FFhgEZx2BmkAmHC8HwpOUyxSA50VqOjXgAl50URvNWPBRcAnmwnhbcduthqQCO9KYTFBG7eDWoK1T47AZX9DuiUYT/TuhX3MGpnD51kPprSA9Dl+BCKl7jWHHEHmHsLWhNZZMxPQCLTEuy+cYF6D9i8Q5e2Lcyz4AGwKdJbX0p7AegC2qnvxAsAxQRAYH8J6Dg1a/lvpKRJinMW4cxLMPsDAJjSCaG8cPmnAAAAAElFTkSuQmCC" alt="" class="favicon--image">
+            </picture>
+            <section class="url--information">
+              <h3 class="url--information__title">Wikipedia</h3>
+              <p class="url--information__url">www.wikipedia.com</p>
+            </section>
+          </a>
+          <section class="metrics--container">
+            <span class="metrics--popularity" title="Popularity"><i class="nf nf-oct-graph"></i> Popularity</span>
+            <span class="metrics--number-words" title="Number of words"><i class="nf nf-cod-whole_word"></i> Number Words</span>
+            <span class="metrics--year" title="Publication"><i class="nf nf-md-timetable"></i> Year</span>
+          </section>
+        </section>
+			<!-- <h1 class="title--search">Search a word</h1> -->
+		</main>
+    <footer>
+			<div class="footer--author__container">
+				<h4>Erick Capilla || Alexandra Soza</h4>
+			</div>
+			<div class="footer--copy__container">
+				<h4>Universidad Autónoma de Tlaxcala &copy;2023</h4>
+			</div>
+		</footer>
+
+    <script>
+      const search_form = document.getElementById('search_form')
+      search_form.addEventListener('submit', (e) => {
+        e.preventDefault()
+      })
+    </script>
+  </body>
+</html>

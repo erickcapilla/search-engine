@@ -1,0 +1,164 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+:root {
+  --main-color: rgb(0, 0, 10);
+  --text-color: white;
+  --size-header: 90px;
+  --size-footer: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+header {
+  border: transparent;
+  border-bottom: 1px solid white;
+  width: 100vw;
+  height: var(--size-header);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header--search-form__container {
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  width: auto;
+  height: auto;
+  padding: 0 10px;
+}
+
+.header--search-form__container form {
+  display: flex;
+
+}
+
+.search-form--input-search {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  width: 500px;
+  height: 50px;
+  padding-left: 10px;
+  color: var(--text-color);
+  font-size: 1.2em;
+}
+
+.search-form--input-search::-webkit-search-cancel-button {
+  height: 1em;
+  width: 1em;
+  border-radius: 50em;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-form--input-submit {
+  border: transparent;
+  border-left: 2px solid rgba(255, 255, 255, 0.9);
+  background-color: transparent;
+  color: var(--text-color);
+  height: 50px;
+  font-size: 1.2em;
+  padding-left: 10px;
+}
+
+.search-form--input-submit:hover {
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+main {
+  width: 100vw;
+  height: calc(100vh - var(--size-header) - var(--size-footer));
+  display: grid;
+  grid-template-rows: 1fr 15fr;
+}
+
+main .time--container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 10px;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+main .urls--container {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+main .url--card__container:hover .url--information__url {
+  text-decoration: underline;
+}
+
+.urls--container .url--card__container {
+  width: 100%;
+}
+
+.urls--container .url--card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 20fr;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.url--card .favicon--container {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.url--card .url--information {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 10px 0;
+  padding-left: 10px;
+}
+
+.url--information .url--information__title {
+  width: 100%;
+}
+
+.url--information .url--information__url {
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.url--card__container .metrics--container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+footer {
+  width: 100vw;
+  height: var(--size-footer);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
